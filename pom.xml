@@ -45,7 +45,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.6</version>
+            <version>1.5.13</version>
         </dependency>
         <dependency>
             <groupId>org.easymock</groupId>
@@ -159,15 +159,11 @@
                         <configuration>
                             <target>
                                 <dirset dir="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/" id="platform">
-                                    <include name="*" />
+                                    <include name="*"/>
                                 </dirset>
-                                <copy file="${project.basedir}/../yara"
-                                      tofile="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/${toString:platform}/yara"/>
-                                <copy file="${project.basedir}/../yarac"
-                                      tofile="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/${toString:platform}/yarac"/>
-                                <jar destfile="${project.build.directory}/${project.artifactId}-${project.version}-${toString:platform}.jar"
-                                     basedir="${project.build.directory}/generated-sources/hawtjni/lib/"
-                                     update="true">
+                                <copy file="${project.basedir}/../yara" tofile="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/${toString:platform}/yara"/>
+                                <copy file="${project.basedir}/../yarac" tofile="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/${toString:platform}/yarac"/>
+                                <jar destfile="${project.build.directory}/${project.artifactId}-${project.version}-${toString:platform}.jar" basedir="${project.build.directory}/generated-sources/hawtjni/lib/" update="true">
                                 </jar>
                             </target>
                         </configuration>
@@ -181,12 +177,10 @@
                         <configuration>
                             <target>
                                 <dirset dir="${project.build.directory}/generated-sources/hawtjni/lib/META-INF/native/" id="platform">
-                                    <include name="*" />
+                                    <include name="*"/>
                                 </dirset>
-                                <copy file="${project.basedir}/../yara"
-                                      tofile="${project.build.directory}/test-classes/META-INF/native/${toString:platform}/yara"/>
-                                <copy file="${project.basedir}/../yarac"
-                                      tofile="${project.build.directory}/test-classes/META-INF/native/${toString:platform}/yarac"/>
+                                <copy file="${project.basedir}/../yara" tofile="${project.build.directory}/test-classes/META-INF/native/${toString:platform}/yara"/>
+                                <copy file="${project.basedir}/../yarac" tofile="${project.build.directory}/test-classes/META-INF/native/${toString:platform}/yarac"/>
                             </target>
                         </configuration>
                     </execution>
